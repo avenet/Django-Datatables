@@ -1,4 +1,4 @@
-This project actually a fork of datatables_demo 1.6.2 which is work with Django 1.1 and below. For more information checkout [1].
+This project actually a fork of datatables_demo 1.6.2 which is work with Django 1.6 and below. For more information checkout [1].
 I integrated project with buildout and made it work with Django 1.3 and above.
 You can easily integrate project with yours if you follow instructions on this readme document.
 
@@ -35,5 +35,3 @@ Create a separate url and view for returning a json object to datatables.
 1. Create a  queryset object for the model you wish the data to be drawn from (querySet)
 2. Create a dict for the column names, in correct display order (columnIndexNameMap)
 3. Return the response to get_datatables_records which is contained in utils.py
-
-[1]: http://www.assembla.com/code/datatables_demo/subversion/nodes/trunk/1_6_2
