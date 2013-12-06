@@ -72,7 +72,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.auth.middleware.AuthenticationMiddleware',
 )
 
-ROOT_URLCONF = 'datatables_demo.urls'
+ROOT_URLCONF = 'urls'
 
 TEMPLATE_DIRS = (
     ROOT('templates'),
@@ -83,5 +83,5 @@ INSTALLED_APPS = (
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.sites',
-	'datatables_demo.demo',
+	'demo',
 )

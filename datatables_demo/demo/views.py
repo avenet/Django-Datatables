@@ -1,7 +1,7 @@
 from django.shortcuts import render_to_response
 from django.template.context import RequestContext
-from datatables_demo.demo.models import Country
-from datatables_demo.demo.utils import get_datatables_records
+from .models import Country
+from .utils import get_datatables_records
 
 def index(request):
     return render_to_response('demo/index.html', locals(), context_instance=RequestContext(request))

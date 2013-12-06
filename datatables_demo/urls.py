@@ -8,11 +8,11 @@ import os
 
 urlpatterns = patterns('',
     # Example:
-	 url(r'^$', 'datatables_demo.demo.views.index'),
-     url(r'^demo/load-once/$', 'datatables_demo.demo.views.load_once_demo_view', name = 'load_once_demo'),
-	 url(r'^demo/server-side/$', 'datatables_demo.demo.views.server_side_demo_view', name = 'server_side_demo'),
+	 url(r'^$', 'demo.views.index'),
+     url(r'^demo/load-once/$', 'demo.views.load_once_demo_view', name = 'load_once_demo'),
+	 url(r'^demo/server-side/$', 'demo.views.server_side_demo_view', name = 'server_side_demo'),
 
-	  url(r'^ajax/get-countries-list/$', 'datatables_demo.demo.views.get_countries_list', name = 'get_countries_list'),
+	  url(r'^ajax/get-countries-list/$', 'demo.views.get_countries_list', name = 'get_countries_list'),
 
     # Uncomment the admin/doc line below and add 'django.contrib.admindocs' 
     # to INSTALLED_APPS to enable admin documentation:
