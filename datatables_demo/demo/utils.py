@@ -42,8 +42,12 @@ def get_datatables_records(request, querySet, columnIndexNameMap, jsonTemplatePa
             if request.GET.get('bSortable_{0}'.format(sortedColID), 'false') == 'true':
                 sortedColName = columnIndexNameMap[sortedColID]
                 sortingDirection = request.GET.get('sSortDir_'+str(sortedColIndex), 'asc')
-                if sortingDirection == 'desc':
-                    sortedColName = '-'+sortedColName
+
+                if sortingDirection == 'desc' and not sortedColName.startswith('-'):
+                    sortedColName = '-' + sortedColName
+                elif sortedColName.startswith('-') and sortingDirection == 'asc':
+                    sortedColName = sortedColName[1:]
+
                 asortingCols.append(sortedColName)
         querySet = querySet.order_by(*asortingCols)
 
